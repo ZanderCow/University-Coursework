@@ -36,15 +36,24 @@ public class ArrayListVoteCounterTest {
      */
     @Test
     public void recordVote() {
-        // Assert both the votes and spoiled votes ArrayLists are empty.
+        
+       // are both the votes and spoiled votes ArrayLists are empty.
+        assertTrue(voteCounter.getVotes().isEmpty());
+        assertTrue(voteCounter.getSpoiledVotes().isEmpty());
         
         // Record some votes for one or more of the candidates. Use the legend 
         // above for clarification.
+        for (int i = 0; i < 5; i++) {
+            voteCounter.recordVote("Darth Vader");
+        }
         
-        // Using the appropriate getter, make sure the candidates actually 
-        // received the appropriate votes.
+        //do the candidates actually receive the appropriate votes.
+        assertEquals(voteCounter.getSithSenateMemberVotes("Darth Vader"), 5);
+      
         
-        // Assert that the size of the votes list has increased correctly.
+        // did the vote list has increase
+        assertTrue(voteCounter.getVotes().size() > 0);
+
         
     }
 

@@ -18,9 +18,7 @@ public class ArrayListVoteCounter {
     private ArrayList<String> spoiledVotes;
     private SithSenateMember[] sithSenateMembers;
     
-    // TODO: Remove the index trackers.
-    private int voteIndex;
-    private int spoiledVoteIndex;
+  
 
     /**
      * Create new ArrayVoteCounter with file
@@ -30,11 +28,6 @@ public class ArrayListVoteCounter {
         votes = new ArrayList<>();
         spoiledVotes = new ArrayList<>();
         sithSenateMembers = new SithSenateMember[4];
-        
-        // TODO: Remove the index trackers.
-        voteIndex = 0;
-        spoiledVoteIndex = 0;
-        
         
         setupCandidates();
     }
@@ -55,16 +48,8 @@ public class ArrayListVoteCounter {
      */
     public void recordVote(String name) {
         if (!name.isEmpty()) {
-            // BEGIN EDIT
-            /* 
-                Update the votes ArrayList with the current vote. 
-                This shouldn't be more than one line. 
-            */
-            
-            // END EDIT
-            
-            // TODO: Remove the index tracker increment
-            voteIndex++;
+           
+            this.votes.add(name); //Updates the votes ArrayList with the current vote.
 
             switch (name) {
                 case "Darth Sidius":
@@ -80,16 +65,7 @@ public class ArrayListVoteCounter {
                     sithSenateMembers[3].addVote();
                     break;
                 default:
-                    // BEGIN EDIT
-                    /* 
-                        Update the spoiled votes ArrayList.
-                        This shouldn't be more than one line.
-                    */
-                    
-                    // END EDIT
-                    
-                    // TODO: Remove me
-                    spoiledVoteIndex++;
+                    this.spoiledVotes.add(name); // adds vote to spoiled list
             }
         }
     }
@@ -111,17 +87,6 @@ public class ArrayListVoteCounter {
         }
         System.out.println("There were " + spoiledVotes.size() + 
                 " spoiled votes.");
-    }
-
-    /**
-     * Copy contents of array into a new one of double the original length
-     * @param myArray to be expanded
-     * @return new array
-     */
-    private String[] expandCapacity(String[] myArray) {
-        String[] newArray = Arrays.copyOf(myArray, myArray.length * 2);
-        return newArray;
-
     }
 
     /**

@@ -67,7 +67,7 @@ public class ArrayVoteCounter {
                     sithSenateMembers[3].addVote();
                     break;
                 default:
-                    if (spoiledVoteIndex == spoiledVotes.length) {
+                    if (spoiledVoteIndex == spoiledVotes.length) { // are the arrays the same size
                         spoiledVotes = expandCapacity(spoiledVotes);
                     }
                     spoiledVotes[spoiledVoteIndex] = name;
