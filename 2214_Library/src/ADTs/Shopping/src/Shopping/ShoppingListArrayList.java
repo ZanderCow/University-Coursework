@@ -65,7 +65,7 @@ public class ShoppingListArrayList implements ShoppingListADT {
      * first seen fin the list 
      */
     @Override
-    public boolean remove(Grocery ent) throws ElementNotFoundException {
+    public boolean remove(Grocery ent) throws ElementNotFoundException{
         boolean found = false;
 
         // throws an expcetions if the arrayList size is 0
@@ -79,7 +79,7 @@ public class ShoppingListArrayList implements ShoppingListADT {
         else{  
             int i = 0; 
             for (; i < this.shoppingList.size(); i++){
-                if (this.shoppingList.get(i).equals(ent)){  // if it is found, please remove it and set the value of `found`.
+                if (this.shoppingList.get(i).compareTo(ent) == 0){  // if it is found, please remove it and set the value of `found`.
                     found = true;
                     this.shoppingList.remove(i);
                     return found; /// ends the method if the element is found
