@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2214_Library/2214_Library.iml" filepath="$PROJECT_DIR$/2214_Library/2214_Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other /ConcertTicket/ConcertTicket.iml" filepath="$PROJECT_DIR$/other /ConcertTicket/ConcertTicket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ITSC 2214.iml" filepath="$PROJECT_DIR$/.idea/ITSC 2214.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other /Shopping/Shopping.iml" filepath="$PROJECT_DIR$/other /Shopping/Shopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other /VoteCounter/VoteCounter.iml" filepath="$PROJECT_DIR$/other /VoteCounter/VoteCounter.iml" />
+    </modules>
+  </component>
+</project>
