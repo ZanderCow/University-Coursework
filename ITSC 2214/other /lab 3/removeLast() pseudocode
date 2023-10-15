@@ -1,0 +1,20 @@
+removeLast(){
+
+if the list has no elements:
+		throw a exception
+	
+	if the list only has one element:
+		set a refrence variable to point at the first nodes element data
+		set the next and prev pointers of the node to null
+		set the pointers of the head and tail of the list to null
+		decrement the number of nodes by one
+		return the element data that was pointed at by the reference variable
+	
+	if the list has more than one element:
+		set a refrence variable to point at the last nodes element data
+		go to the previous node
+		point the tail of the list at that node
+		set the nodes next pointer to be at the tail
+		return the element data that was pointed at by the reference variable
+
+}
